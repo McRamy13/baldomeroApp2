@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BaldomeroFormulario</string>
+    <string name="lblEdad">Edad</string>
+    <string name="lblRepetidor">Repetidor</string>
+    <string name="chkRepetidor">Repetidor</string>
+    <string name="textHintMail">Escriba un email</string>
+</resources>
