@@ -17,6 +17,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     CheckBox chkCasado;
+    Button btnAceptar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         //Ponemos el check a false para asegurarnos que el usuario lo marque.
         chkCasado.setChecked(false);
         //Llamamos al botón y le pasamos la función validarEmail.
-        Button btnAceptar = (Button) findViewById(R.id.btnAceptar);
+        btnAceptar = (Button) findViewById(R.id.btnAceptar);
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     //Si está vacío, en ese caso no habilitamos el botón
+                    if(TextUtils.isEmpty((txtEmail.getText().toString()))) {
+                        btnAceptar.setEnabled(false);
+                    }
                 }
             });
         }
