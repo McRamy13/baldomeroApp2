@@ -4,4 +4,14 @@
     <string name="lblRepetidor">Repetidor</string>
     <string name="chkRepetidor">Repetidor</string>
     <string name="textHintMail">Escriba un email</string>
+    <string name="chkMujer">M</string>
+    <string name="chkHombre">H</string>
+    <string name="casado">Casado</string>
+    <string name="nombreSujeto">Baldomero</string>
+    <string name="lblEmail">Email</string>
+    <string name="lblNombreCasado">Nombre</string>
+    <string name="lblSexo">Sexo</string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="switchJamon">Jamón</string>
+    <string name="switchJam">Jamón</string>
 </resources>

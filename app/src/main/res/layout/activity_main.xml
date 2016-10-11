@@ -38,7 +38,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/baldomero"
+                app:srcCompat="@drawable/mrt"
                 android:id="@+id/imageView"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
@@ -50,14 +50,15 @@
                 />
 
             <TextView
-                android:text="Baldomero"
+                android:text="@string/nombreSujeto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/lblBaldomero"
                 android:textStyle="normal|bold"
                 android:gravity="right"
-                android:textColor="#000000"
+                android:textColor="@color/colorPrimaryDark"
                 android:layout_alignBottom="@id/imageView"
+
                 />
 
             <TextView
@@ -73,20 +74,8 @@
                 android:layout_marginLeft="10dp"
                 />
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="3"
-                android:id="@+id/txtEdad"
-                android:layout_alignBaseline="@+id/chkRepetidor"
-                android:layout_alignBottom="@+id/chkRepetidor"
-                android:layout_alignLeft="@+id/txtEmail"
-                android:layout_alignStart="@+id/txtEmail"
-                />
-
             <TextView
-                android:text="Email"
+                android:text="@string/lblEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -96,6 +85,7 @@
                 android:id="@+id/lblEmail"
                 android:hint="@string/textHintMail"
                 android:layout_marginLeft="10dp"
+                android:maxWidth="50dp"
                 />
 
             <EditText
@@ -107,12 +97,28 @@
                 android:id="@+id/txtEmail"
                 android:layout_alignBaseline="@+id/lblEmail"
                 android:layout_alignBottom="@+id/lblEmail"
-                android:layout_toRightOf="@+id/lblJamon"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/switchJamon"
+                android:layout_toEndOf="@+id/switchJamon" />
 
             <CheckBox
-                android:text="Casado"
+                android:text="@string/chkRepetidor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkRepetidor"
+                android:paddingLeft="10dp"
+                android:paddingRight="30dp"
+
+                android:layout_alignBaseline="@+id/lblEdad"
+                android:layout_alignBottom="@+id/lblEdad"
+                android:layout_toLeftOf="@+id/chkCasado"
+                android:layout_toStartOf="@+id/chkCasado"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp" />
+
+            <CheckBox
+                android:text="@string/casado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/chkCasado"
@@ -123,7 +129,7 @@
                 android:layout_alignEnd="@+id/txtEmail" />
 
             <TextView
-                android:text="Nombre"
+                android:text="@string/lblNombreCasado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/lblNombre"
@@ -147,7 +153,7 @@
                 android:layout_toRightOf="@+id/btnAceptar" />
 
             <TextView
-                android:text="Sexo"
+                android:text="@string/lblSexo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/lblSexo"
@@ -161,20 +167,19 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/groupRadio"
                 android:layout_alignTop="@+id/lblSexo"
-                android:layout_toRightOf="@+id/lblJamon"
-                android:layout_toEndOf="@+id/lblJamon"
+                android:layout_toRightOf="@+id/switchJamon"
                 android:layout_marginLeft="21dp"
                 android:layout_marginStart="21dp">
 
                 <RadioButton
-                    android:text="M"
+                    android:text="@string/chkMujer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/radioMujer"
                     android:layout_gravity="center" />
 
                 <RadioButton
-                    android:text="H"
+                    android:text="@string/chkHombre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/radioHombre"
@@ -182,46 +187,37 @@
 
             </RadioGroup>
 
+            <Switch
+                android:text="@string/switchJam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/switchJamon"
+                android:layout_below="@+id/groupRadio"
+                android:layout_alignLeft="@+id/lblSexo"
+                android:layout_alignStart="@+id/lblSexo"
+                />
+
             <Button
-                android:text="Aceptar"
+                android:text="@string/btnAceptar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnAceptar"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true" />
 
-            <TextView
-                android:text="Jamón"
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/lblJamon"
-                android:layout_alignLeft="@+id/lblSexo"
-                android:layout_alignStart="@+id/lblSexo"
-                android:layout_alignTop="@+id/seekBar2" />
-
-            <SeekBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/seekBar2"
-                android:layout_below="@+id/groupRadio"
-                android:layout_alignLeft="@+id/groupRadio"
-                android:layout_alignStart="@+id/groupRadio"
-                android:layout_marginTop="20dp" />
-
-            <CheckBox
-                android:text="@string/chkRepetidor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/chkRepetidor"
-                android:paddingLeft="10dp"
-                android:paddingRight="30dp"
-
-                android:layout_alignBaseline="@+id/lblEdad"
-                android:layout_alignBottom="@+id/lblEdad"
-                android:layout_toLeftOf="@+id/chkCasado"
-                android:layout_toStartOf="@+id/chkCasado"
-                android:layout_marginRight="10dp"
-                android:layout_marginEnd="10dp" />
+                android:inputType="number"
+                android:ems="3"
+                android:id="@+id/txtEdad"
+                android:layout_marginRight="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_alignBaseline="@+id/chkRepetidor"
+                android:layout_alignBottom="@+id/chkRepetidor"
+                android:layout_toLeftOf="@+id/chkRepetidor"
+                android:layout_toStartOf="@+id/chkRepetidor" />
 
         </RelativeLayout>
     </ScrollView>
